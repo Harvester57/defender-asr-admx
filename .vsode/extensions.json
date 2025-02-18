@@ -1,0 +1,8 @@
+{
+  "recommendations": [
+    "redhat.vscode-xml",
+    "EditorConfig.EditorConfig",
+    "DavidAnson.vscode-markdownlint",
+    "bierner.markdown-preview-github-styles"
+  ]
+}

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--  (c) 2025 Michael Grafnetter  -->
+<policyDefinitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" revision="1.0" schemaVersion="1.0" xmlns="http://schemas.microsoft.com/GroupPolicy/2006/07/PolicyDefinitions"  xsi:schemaLocation="http://schemas.microsoft.com/GroupPolicy/2006/07/PolicyDefinitions ../Schema/PolicyDefinitionFiles.xsd">
+  <policyNamespaces>
+    <target prefix="asr" namespace="Microsoft.Policies.WindowsDefender.AttackSurfaceReductionRules" />
+    <using prefix="windef" namespace="Microsoft.Policies.WindowsDefender" />
+    <using prefix="windows" namespace="Microsoft.Policies.Windows" />
+  </policyNamespaces>
+  <resources minRequiredRevision="1.0" />
+  <policies>
+    <policy name="ExploitGuard_ASR_Rules_Lsass" class="Machine" displayName="$(string.ExploitGuard_ASR_Rules_Lsass)" explainText="$(string.ExploitGuard_ASR_Rules_Lsass_Explain)" presentation="$(presentation.ExploitGuard_ASR_Rules_Lsass)" key="Software\Policies\Microsoft\Windows Defender\Windows Defender Exploit Guard\ASR\Rules" valueName="9e6c4e1f-7d60-472f-ba1a-a39ef669e4b2">
+      <parentCategory ref="windef:ExploitGuard_ASR" />
+      <supportedOn ref="windows:SUPPORTED_Windows_10_0_RS3" />
+      <disabledValue>
+        <string>0</string>
+      </disabledValue>
+      <elements>
+        <enum id="ExploitGuard_ASR_Rules_Lsass_Options" key="Software\Policies\Microsoft\Windows Defender\Windows Defender Exploit Guard\ASR\Rules" valueName="9e6c4e1f-7d60-472f-ba1a-a39ef669e4b2" required="true">
+          <item displayName="$(string.AuditMode)">
+            <value>
+              <string>2</string>
+            </value>
+          </item>
+          <item displayName="$(string.WarnMode)">
+            <value>
+              <string>6</string>
+            </value>
+          </item>
+          <item displayName="$(string.BlockMode)">
+            <value>
+              <string>1</string>
+            </value>
+          </item>
+        </enum>
+      </elements>
+    </policy>
+  </policies>
+</policyDefinitions>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--  (c) 2025 Michael Grafnetter  -->
+<policyDefinitionResources xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" revision="1.0" schemaVersion="1.0" xmlns="http://schemas.microsoft.com/GroupPolicy/2006/07/PolicyDefinitions"  xsi:schemaLocation="http://schemas.microsoft.com/GroupPolicy/2006/07/PolicyDefinitions ../../Schema/PolicyDefinitionFiles.xsd">
+  <displayName>Defender Attack Surface Reduction Rules</displayName>
+  <description>Policy for Microsoft Defender Attack Surface Reduction Rules</description>
+  <resources>
+    <stringTable>
+      <string id="ExploitGuard_ASR_Rules_Lsass">Block credential stealing from the Windows local security authority subsystem (lsass.exe)</string>
+      <string id="ExploitGuard_ASR_Rules_Lsass_Explain">TODO</string>
+    </stringTable>
+    <presentationTable>
+      <presentation id="ExploitGuard_ASR_Rules_Lsass">
+        <dropdownList refId="ExploitGuard_ASR_Rules_Lsass_Options" defaultItem="2" noSort="true">Mode:</dropdownList>
+      </presentation>
+    </presentationTable>
+  </resources>
+</policyDefinitionResources>
