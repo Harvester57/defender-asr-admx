@@ -6,11 +6,105 @@
   <resources>
     <stringTable>
       <string id="ExploitGuard_ASR_Rules_Lsass">Block credential stealing from the Windows local security authority subsystem (lsass.exe)</string>
-      <string id="ExploitGuard_ASR_Rules_Lsass_Explain">TODO</string>
+      <string id="ExploitGuard_ASR_Rules_Lsass_Explain">This rule helps prevent credential stealing by blocking code injection attempts targeting lsass.exe.</string>
+      <string id="ExploitGuard_ASR_Rules_Drivers">Block abuse of exploited vulnerable signed drivers</string>
+      <string id="ExploitGuard_ASR_Rules_Drivers_Explain">This rule prevents exploitation of vulnerable signed drivers to escalate privileges.</string>
+      <string id="ExploitGuard_ASR_Rules_AdobeReader">Block Adobe Reader from creating child processes</string>
+      <string id="ExploitGuard_ASR_Rules_AdobeReader_Explain">This rule prevents Adobe Reader from creating child processes that could be used for malicious purposes.</string>
+      <string id="ExploitGuard_ASR_Rules_Office_CreateProcess">Block all Office applications from creating child processes</string>
+      <string id="ExploitGuard_ASR_Rules_Office_CreateProcess_Explain">This rule blocks Office applications from creating child processes to prevent malicious macro execution.</string>
+      <string id="ExploitGuard_ASR_Rules_Email">Block executable content from email client and webmail</string>
+      <string id="ExploitGuard_ASR_Rules_Email_Explain">This rule blocks execution of potentially malicious files from email clients and webmail.</string>
+      <string id="ExploitGuard_ASR_Rules_SmartScreen">Block executable files from running unless they meet a prevalence, age, or trusted list criterion</string>
+      <string id="ExploitGuard_ASR_Rules_SmartScreen_Explain">This rule helps prevent execution of suspicious or unknown executables using SmartScreen criteria.</string>
+      <string id="ExploitGuard_ASR_Rules_Obfuscated">Block execution of potentially obfuscated scripts</string>
+      <string id="ExploitGuard_ASR_Rules_Obfuscated_Explain">This rule blocks scripts that appear to be obfuscated to hide malicious content.</string>
+      <string id="ExploitGuard_ASR_Rules_Script_Staging">Block JavaScript or VBScript from launching downloaded executable content</string>
+      <string id="ExploitGuard_ASR_Rules_Script_Staging_Explain">This rule prevents scripts from launching downloaded executable files to block malware delivery.</string>
+      <string id="ExploitGuard_ASR_Rules_Office_CreateExecutable">Block Office applications from creating executable content</string>
+      <string id="ExploitGuard_ASR_Rules_Office_CreateExecutable_Explain">This rule prevents Office applications from creating executable files that could contain malware.</string>
+      <string id="ExploitGuard_ASR_Rules_Office_Injection">Block Office applications from injecting code into other processes</string>
+      <string id="ExploitGuard_ASR_Rules_Office_Injection_Explain">This rule prevents Office applications from injecting code into other processes to block malicious macro behavior.</string>
+      <string id="ExploitGuard_ASR_Rules_OfficeComm_CreateProcess">Block Office communication application from creating child processes</string>
+      <string id="ExploitGuard_ASR_Rules_OfficeComm_CreateProcess_Explain">This rule blocks Office communication apps from creating child processes that could be malicious.</string>
+      <string id="ExploitGuard_ASR_Rules_WMIPersistence">Block persistence through WMI event subscription</string>
+      <string id="ExploitGuard_ASR_Rules_WMIPersistence_Explain">This rule prevents attackers from using WMI event subscriptions for persistence.</string>
+      <string id="ExploitGuard_ASR_Rules_PSExec">Block process creations originating from PSExec and WMI commands</string>
+      <string id="ExploitGuard_ASR_Rules_PSExec_Explain">This rule blocks potentially malicious process creation through PSExec and WMI commands.</string>
+      <string id="ExploitGuard_ASR_Rules_SafeMode">Block rebooting machine in Safe Mode (preview)</string>
+      <string id="ExploitGuard_ASR_Rules_SafeMode_Explain">This rule prevents attackers from forcing system reboots into Safe Mode to bypass security controls.</string>
+      <string id="ExploitGuard_ASR_Rules_USB">Block untrusted and unsigned processes that run from USB</string>
+      <string id="ExploitGuard_ASR_Rules_USB_Explain">This rule blocks execution of untrusted or unsigned processes from USB devices.</string>
+      <string id="ExploitGuard_ASR_Rules_ToolCopy">Block use of copied or impersonated system tools (preview)</string>
+      <string id="ExploitGuard_ASR_Rules_ToolCopy_Explain">This rule prevents the use of copied or impersonated system tools that could be used maliciously.</string>
+      <string id="ExploitGuard_ASR_Rules_Webshell">Block Webshell creation for Servers</string>
+      <string id="ExploitGuard_ASR_Rules_Webshell_Explain">This rule helps prevent webshell creation and execution on servers.</string>
+      <string id="ExploitGuard_ASR_Rules_Office_MacroWin32API">Block Win32 API calls from Office macros</string>
+      <string id="ExploitGuard_ASR_Rules_Office_MacroWin32API_Explain">This rule blocks Office macros from making potentially dangerous Win32 API calls.</string>
+      <string id="ExploitGuard_ASR_Rules_Ransomware">Use advanced protection against ransomware</string>
+      <string id="ExploitGuard_ASR_Rules_Ransomware_Explain">This rule enables advanced protection features to prevent ransomware attacks.</string>
+      <string id="AuditMode">Audit</string>
+      <string id="WarnMode">Warn</string>
+      <string id="BlockMode">Block</string>
+      <string id="DisabledMode">Disabled</string>
     </stringTable>
     <presentationTable>
       <presentation id="ExploitGuard_ASR_Rules_Lsass">
-        <dropdownList refId="ExploitGuard_ASR_Rules_Lsass_Options" defaultItem="2" noSort="true">Mode:</dropdownList>
+        <dropdownList refId="ExploitGuard_ASR_Rules_Lsass_Options" defaultItem="1" noSort="true">Mode:</dropdownList>
+      </presentation>
+      <presentation id="ExploitGuard_ASR_Rules_Drivers">
+        <dropdownList refId="ExploitGuard_ASR_Rules_Drivers_Options" defaultItem="1" noSort="true">Mode:</dropdownList>
+      </presentation>
+      <presentation id="ExploitGuard_ASR_Rules_AdobeReader">
+        <dropdownList refId="ExploitGuard_ASR_Rules_AdobeReader_Options" defaultItem="1" noSort="true">Mode:</dropdownList>
+      </presentation>
+      <presentation id="ExploitGuard_ASR_Rules_Office_CreateProcess">
+        <dropdownList refId="ExploitGuard_ASR_Rules_Office_CreateProcess_Options" defaultItem="1" noSort="true">Mode:</dropdownList>
+      </presentation>
+      <presentation id="ExploitGuard_ASR_Rules_Email">
+        <dropdownList refId="ExploitGuard_ASR_Rules_Email_Options" defaultItem="1" noSort="true">Mode:</dropdownList>
+      </presentation>
+      <presentation id="ExploitGuard_ASR_Rules_SmartScreen">
+        <dropdownList refId="ExploitGuard_ASR_Rules_SmartScreen_Options" defaultItem="1" noSort="true">Mode:</dropdownList>
+      </presentation>
+      <presentation id="ExploitGuard_ASR_Rules_Obfuscated">
+        <dropdownList refId="ExploitGuard_ASR_Rules_Obfuscated_Options" defaultItem="1" noSort="true">Mode:</dropdownList>
+      </presentation>
+      <presentation id="ExploitGuard_ASR_Rules_Script_Staging">
+        <dropdownList refId="ExploitGuard_ASR_Rules_Script_Staging_Options" defaultItem="1" noSort="true">Mode:</dropdownList>
+      </presentation>
+      <presentation id="ExploitGuard_ASR_Rules_Office_CreateExecutable">
+        <dropdownList refId="ExploitGuard_ASR_Rules_Office_CreateExecutable_Options" defaultItem="1" noSort="true">Mode:</dropdownList>
+      </presentation>
+      <presentation id="ExploitGuard_ASR_Rules_Office_Injection">
+        <dropdownList refId="ExploitGuard_ASR_Rules_Office_Injection_Options" defaultItem="1" noSort="true">Mode:</dropdownList>
+      </presentation>
+      <presentation id="ExploitGuard_ASR_Rules_OfficeComm_CreateProcess">
+        <dropdownList refId="ExploitGuard_ASR_Rules_OfficeComm_CreateProcess_Options" defaultItem="1" noSort="true">Mode:</dropdownList>
+      </presentation>
+      <presentation id="ExploitGuard_ASR_Rules_WMIPersistence">
+        <dropdownList refId="ExploitGuard_ASR_Rules_WMIPersistence_Options" defaultItem="1" noSort="true">Mode:</dropdownList>
+      </presentation>
+      <presentation id="ExploitGuard_ASR_Rules_PSExec">
+        <dropdownList refId="ExploitGuard_ASR_Rules_PSExec_Options" defaultItem="1" noSort="true">Mode:</dropdownList>
+      </presentation>
+      <presentation id="ExploitGuard_ASR_Rules_SafeMode">
+        <dropdownList refId="ExploitGuard_ASR_Rules_SafeMode_Options" defaultItem="1" noSort="true">Mode:</dropdownList>
+      </presentation>
+      <presentation id="ExploitGuard_ASR_Rules_USB">
+        <dropdownList refId="ExploitGuard_ASR_Rules_USB_Options" defaultItem="1" noSort="true">Mode:</dropdownList>
+      </presentation>
+      <presentation id="ExploitGuard_ASR_Rules_ToolCopy">
+        <dropdownList refId="ExploitGuard_ASR_Rules_ToolCopy_Options" defaultItem="1" noSort="true">Mode:</dropdownList>
+      </presentation>
+      <presentation id="ExploitGuard_ASR_Rules_Webshell">
+        <dropdownList refId="ExploitGuard_ASR_Rules_Webshell_Options" defaultItem="1" noSort="true">Mode:</dropdownList>
+      </presentation>
+      <presentation id="ExploitGuard_ASR_Rules_Office_MacroWin32API">
+        <dropdownList refId="ExploitGuard_ASR_Rules_Office_MacroWin32API_Options" defaultItem="1" noSort="true">Mode:</dropdownList>
+      </presentation>
+      <presentation id="ExploitGuard_ASR_Rules_Ransomware">
+        <dropdownList refId="ExploitGuard_ASR_Rules_Ransomware_Options" defaultItem="1" noSort="true">Mode:</dropdownList>
       </presentation>
     </presentationTable>
   </resources>
